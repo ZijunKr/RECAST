@@ -213,9 +213,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Closed-loop driving simulation requires rendered observations to remain reliable as the ego vehicle and surrounding actors move beyond their recorded trajectories, exposing views absent from the source log. Existing data-driven simulators reconstruct dynamic actors from sparse observations, which can result in rendering artifacts under these viewpoint changes. We introduce RECAST (REconstructing Controllable Actors for Simulation and Testing), a 3D Gaussian Splatting framework that generates a view-complete actor from a single segmented vehicle observation in a driving log and registers the generated actor in the reconstructed scene. RECAST supports planner-in-the-loop rendering under controlled ego–actor motion. To adapt an image-to-3D prior to real vehicles, we further introduce RECAR, a dataset of approximately 20K real vehicles with 600K background-free RGBA images spanning diverse vehicle colors and types. We use two-stage adaptation to improve vehicle generation from real driving-log observations. At the actor level, RECAST reduces FDincep from 9.788 to 7.992 relative to unadapted TRELLIS. At the scene level, under actor motion beyond logged trajectories, RECAST reduces FDincep from 129.35 to 112.10 and increases CLIPmargin (×1000) from 0.14 to 3.47 relative to Street Gaussians. We demonstrate planner-in-the-loop simulation with the image-conditioned planner GTRS-Dense. Compared with native Street Gaussians actors, RECAST increases the no-collision (NC) rate from 22.2% (12/54) to 63.0% (34/54) and the mean minimum predicted time-to-collision (TTC) from 0.798 s to 2.150 s. These experiments show that RECAST supports closed-loop planner evaluation under controlled ego–actor interactions beyond log replay.
           </p>
         </div>
       </div>
@@ -392,4 +391,3 @@
 
   </body>
   </html>
-
